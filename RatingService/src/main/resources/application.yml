@@ -1,0 +1,41 @@
+#Port
+server:
+  port: '9092'
+
+#APP_NAME
+spring:
+  application:
+    name: RatingService
+
+
+##DMDS
+  data:
+    mongodb:
+      auto-index-creation: 'true'
+      username: username
+      database: microservices
+      password: password
+      port: '27017'
+      uri: mongodb://localhost:27017
+      host: localhost
+
+#LSFB
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  #DevTools
+  devtools:
+    livereload:
+      port: 35731
+      enabled: true
+
+#EnableColouredLogging
+  output:
+    ansi:
+      enabled: always

@@ -1,0 +1,37 @@
+#Port
+server:
+  port: '9091'
+
+#APP_NAME
+spring:
+  application:
+    name: HotelService
+
+
+##DMDS
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/microservices
+    username: postgres
+    password: root
+
+#LSFB
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  #DevTools
+  devtools:
+    livereload:
+      port: 35730
+      enabled: true
+
+#EnableColouredLogging
+  output:
+    ansi:
+      enabled: always

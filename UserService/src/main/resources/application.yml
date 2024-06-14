@@ -1,0 +1,38 @@
+#Port
+server:
+  port: '9090'
+
+#APP_NAME
+spring:
+  application:
+    name: UserService
+
+#DMDS
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/microservices
+    username: root
+    password: root
+
+#LSFB
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: update
+
+#DevTools
+  devtools:
+    restart:
+      enabled: true
+
+#EnableColouredLogging
+  output:
+    ansi:
+      enabled: always
+
+
+
+
